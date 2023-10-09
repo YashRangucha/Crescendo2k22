@@ -1,0 +1,38 @@
+<html>
+    {%load static%}
+    
+    <head>
+        <title> Rescue Animals</title>
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    </head>
+    <body>
+        
+        <div class="banner">
+            
+            <div class="navbar">
+                
+                
+                <ul>
+                    <li><a href=''>Home</a></li>
+                    <li><a href="{%url 'about' %}">About Us</a></li>
+                    <li><a href="{%url 'store' %}">Adopt</a></li>
+                    <li><a href="{%url 'login' %}">Login</a></li>
+
+                </ul>
+            </div>
+            <div class="content">
+                <h1>WE ARE THEIR VOICES</h1>
+                <p>Saving one animal won't change the world,<br>but it will change the world for that one animal.</p>
+                <div>
+                    <a href="{% url 'payment' %}">
+
+                    <button type="submit"><span></span>Donate</button></a>
+                    <a href="{% url 'regstray' %}">
+                    <button type="button"><span></span>Help</button></a>
+                
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

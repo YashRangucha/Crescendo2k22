@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Adopt</title>
+
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!--main stylesheet-->
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/store.css' %}"> 
+
+    </head>
+        <body>
+           <br>
+                 
+            <br>
+          
+
+           
+<h3>Animals for adoption</h3>
+<br>
+
+            <div class="row">
+                {% for product in products %}
+                <div class="col-lg-4">
+                    <img class="thumbnail" src="{{product.imageURL}}">
+                    <div class="box-element product">
+                        <h6><strong>{{product.name }}</strong></h6>
+                        <hr>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+        </body>
+</html>
+

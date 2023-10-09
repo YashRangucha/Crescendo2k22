@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/regstray.css' %}">
+    <title>regstray</title>
+    
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Registration for stray animals</h1>
+        <form class=""  method="post" action="/regstray">
+            {% csrf_token %}
+
+            <div class="control">
+            <label for="name">Name</label>
+            <input name="name" id="name" type="text">
+            </div>
+
+            <div class="control">
+                <label for="pname">Animal breed</label>
+                <input name="pname" id="pname"  type="text">
+                </div>
+    
+
+
+            <div class="control">
+            <label for="img">Animal pic</label>
+            <input id="img" name="img" type="file" accept="image/*">
+                </div>
+
+            <div class="control">
+                <label for="local">Locality</label>
+                <input name="local" id="local" type="text">
+                </div>
+                
+
+                <div class="control">
+                    <div class=text> 
+                        <label for="desc">Description</label>
+                        <input name="desc" id="desc" type="textarea">
+                    </div>
+                   
+                    </div>
+    
+
+            <div class="control">
+            <input type="submit" value="Register" class="btn">
+            </div>
+        </form>
+        </div>
+    </section>
+</body>
+</html>
